@@ -36,6 +36,20 @@ public class Rating implements Entity {
     private Map<String, Boolean> likes;
     private Date creationDate;
 
+    public Rating(String id, String beerId, String beerName, String userId, String userName, String userPhoto, String photo, float rating, String comment, Map<String, Boolean> likes, Date creationDate) {
+        this.id = id;
+        this.beerId = beerId;
+        this.beerName = beerName;
+        this.userId = userId;
+        this.userName = userName;
+        this.userPhoto = userPhoto;
+        this.photo = photo;
+        this.rating = rating;
+        this.comment = comment;
+        this.likes = likes;
+        this.creationDate = creationDate;
+    }
+
     @Override
     public String getId() {
         return id;

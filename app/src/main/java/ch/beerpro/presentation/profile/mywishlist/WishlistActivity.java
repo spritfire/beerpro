@@ -49,8 +49,8 @@ public class WishlistActivity extends AppCompatActivity implements OnWishlistIte
         model = ViewModelProviders.of(this).get(WishlistViewModel.class);
         model.getMyWishlistWithBeers().observe(this, this::updateWishlist);
 
-        val layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        val layoutManager = (val) new LinearLayoutManager(this);
+        recyclerView.setLayoutManager((RecyclerView.LayoutManager) layoutManager);
 
         adapter = new WishlistRecyclerViewAdapter(this);
 

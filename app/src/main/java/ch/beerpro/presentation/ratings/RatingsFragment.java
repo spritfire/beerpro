@@ -53,11 +53,11 @@ public class RatingsFragment extends Fragment
         model = ViewModelProviders.of(this).get(MainViewModel.class);
         model.getAllRatingsWithWishes().observe(this, this::updateRatings);
 
-        val layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+        val layoutManager = (val) new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager((RecyclerView.LayoutManager) layoutManager);
 
         adapter = new RatingsRecyclerViewAdapter(this, this, model.getCurrentUser());
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), layoutManager.getOrientation()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), ((LinearLayoutManager) layoutManager).getOrientation()));
 
         recyclerView.setAdapter(adapter);
 
