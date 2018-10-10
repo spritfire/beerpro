@@ -20,6 +20,11 @@ public class MyBeerFromRating implements MyBeer {
     }
 
     @Override
+    public Beer getBeer() {
+        return beer;
+    }
+
+    @Override
     public Date getDate() {
         return rating.getCreationDate();
     }

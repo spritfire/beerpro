@@ -35,4 +35,94 @@ public class Rating implements Entity {
      */
     private Map<String, Boolean> likes;
     private Date creationDate;
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getBeerId() {
+        return beerId;
+    }
+
+    public void setBeerId(String beerId) {
+        this.beerId = beerId;
+    }
+
+    public String getBeerName() {
+        return beerName;
+    }
+
+    public void setBeerName(String beerName) {
+        this.beerName = beerName;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Map<String, Boolean> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Map<String, Boolean> likes) {
+        this.likes = likes;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
 }
