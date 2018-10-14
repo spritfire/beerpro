@@ -1,5 +1,6 @@
 package ch.beerpro.data.repositories;
 
+import com.google.android.gms.tasks.RuntimeExecutionException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -13,7 +14,7 @@ import ch.beerpro.domain.utils.FirestoreQueryLiveDataArray;
 
 public class FridgeRepository {
 
-    private static LiveData<List<FridgeItem>> getFridgeByUser(String userId) {
+    public static LiveData<List<FridgeItem>> getMyFridge(String userId) {
         return new FirestoreQueryLiveDataArray<>(FirebaseFirestore.getInstance().collection(FridgeItem.COLLECTION)
                 .orderBy(FridgeItem.FIELD_AMOUNT, Query.Direction.ASCENDING).whereEqualTo(FridgeItem.FIELD_USER_ID, userId),
                 FridgeItem.class);
@@ -71,4 +72,10 @@ public class FridgeRepository {
         return db.collection(FridgeItem.COLLECTION).document(fridgeItemId);
     }
 
+    public static LiveData<FridgeItem> getMyBeerFromFridge(String userId, String itemId) {
+        LiveData<List<FridgeItem>> list = new FirestoreQueryLiveDataArray<>(FirebaseFirestore.getInstance().collection(FridgeItem.COLLECTION)
+                .orderBy(FridgeItem.FIELD_AMOUNT, Query.Direction.ASCENDING).whereEqualTo(FridgeItem.FIELD_USER_ID, userId)
+                .whereEqualTo(FridgeItem.FIELD_BEER_ID, itemId), FridgeItem.class);
+        return (LiveData<FridgeItem>) list.getValue();
+    }
 }
