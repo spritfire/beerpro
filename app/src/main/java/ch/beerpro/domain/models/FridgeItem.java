@@ -2,8 +2,15 @@ package ch.beerpro.domain.models;
 
 import com.google.firebase.firestore.Exclude;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class FridgeItem implements Entity {
     public static final String COLLECTION = "fridgeitems";
     public static final String FIELD_ID = "id";
@@ -22,12 +29,6 @@ public class FridgeItem implements Entity {
     private String beerId;
     @NonNull
     private int amount;
-
-    public FridgeItem(String userId, String beerId, int amount) {
-        this.userId = userId;
-        this.beerId = beerId;
-        this.amount = amount;
-    }
 
     public static String generateId(String userId, String beerId) {
         return String.format("%s_%s", userId, beerId);
