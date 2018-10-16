@@ -27,8 +27,14 @@ public class FridgeItem implements Entity {
     private String userId;
     @NonNull
     private String beerId;
-    @NonNull
+
     private int amount;
+
+    public FridgeItem(String userId, String beerId, int amount) {
+        this.userId = userId;
+        this.beerId = beerId;
+        this.amount = amount;
+    }
 
     public static String generateId(String userId, String beerId) {
         return String.format("%s_%s", userId, beerId);
