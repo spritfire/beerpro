@@ -21,11 +21,11 @@ public class FridgeRepository {
     }
 
 
-    public Task<Void> toggleUserFridgeItem(String userId, String itemId) {
+    public Task<Void> addItemToFridge(String userId, String itemId) {
         DocumentReference fridgeEntryQuery = getFridgeItemEntry(userId, itemId);
         return fridgeEntryQuery.get().continueWithTask(task -> {
             if (task.isSuccessful() && task.getResult().exists()) {
-                return fridgeEntryQuery.delete();
+                return null;
             } else if (task.isSuccessful()) {
                 return fridgeEntryQuery.set(new FridgeItem(userId, itemId, 1));
             } else {
