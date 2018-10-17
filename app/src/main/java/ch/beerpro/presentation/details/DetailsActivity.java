@@ -126,6 +126,12 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
         BottomSheetDialog dialog = new BottomSheetDialog(this);
         dialog.setContentView(view);
         dialog.show();
+
+        view.findViewById(R.id.addToFridge).setOnClickListener(v -> {
+            model.addItemToFridge();
+            Intent intent = new Intent(this, MyFridgeActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void updateBeer(Beer item) {
@@ -183,12 +189,5 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    @OnClick(R.id.addToFridge)
-    public void onAddToFridgeListener(View view) {
-        model.addItemToFridge();
-        Intent intent = new Intent(this, MyFridgeActivity.class);
-        startActivity(intent);
     }
 }
