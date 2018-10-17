@@ -12,7 +12,6 @@ import java.util.Date;
 @IgnoreExtraProperties
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Wish implements Entity {
 
     public static final String COLLECTION = "wishes";
@@ -32,6 +31,12 @@ public class Wish implements Entity {
     private String beerId;
     @NonNull
     private Date addedAt;
+
+    public Wish(String userId, String itemId, Date addedAt) {
+        this.userId = userId;
+        id = itemId;
+        this.addedAt = addedAt;
+    }
 
     public static String generateId(String userId, String beerId) {
         return String.format("%s_%s", userId, beerId);

@@ -102,5 +102,6 @@
     <string name="title_activity_wishlist">Wunschliste</string>
     <string name="title_activity_myratings">Meine Bewertungen</string>
     <string name="title_activity_mybeers">Meine Biere</string>
+    <string name="title_activity_myfridge">Mein Kühlschrank</string>
     <string name="action_search">Bier suchen</string>
 </resources>

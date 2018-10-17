@@ -50,7 +50,7 @@ public class MainViewModel extends ViewModel implements CurrentUser {
         myWishlist = wishlistRepository.getMyWishlist(currentUserId);
         myRatings = ratingsRepository.getMyRatings(currentUserId);
         myBeers = myBeersRepository.getMyBeers(allBeers, myWishlist, myRatings);
-        myFridge = fridgeRepository.getMyFridge(currentUserId.toString());
+        myFridge = fridgeRepository.getMyFridge(currentUserId);
 
         /*
          * Set the current user id, which is used as input for the getMyWishlist and getMyRatings calls above.

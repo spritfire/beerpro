@@ -1,8 +1,7 @@
 package ch.beerpro.presentation.profile.myfridge;
 
 import android.util.Pair;
-
-import com.google.android.gms.tasks.Task;
+import android.webkit.ConsoleMessage;
 
 import java.util.List;
 
@@ -30,8 +29,8 @@ public class MyFridgeViewModel extends ViewModel implements CurrentUser {
         currentUserId.setValue(getCurrentUser().getUid());
     }
 
-    public LiveData<List<FridgeItem>> getMyFridge() {
-        return fridgeRepository.getMyFridge(getCurrentUser().getUid());
+    public LiveData<List<Pair<FridgeItem, Beer>>> getMyFridgeWithBeers() {
+        return fridgeRepository.getMyFridgeWithBeers(currentUserId, beersRepository.getAllBeers());
     }
 
     public void increaseFridgeItemAmount(String itemId) {
