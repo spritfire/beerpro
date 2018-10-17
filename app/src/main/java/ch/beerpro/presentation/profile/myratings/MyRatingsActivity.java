@@ -42,7 +42,7 @@ public class MyRatingsActivity extends AppCompatActivity implements OnMyRatingIt
         model = ViewModelProviders.of(this).get(MyRatingsViewModel.class);
         model.getMyRatingsWithWishes().observe(this, this::updateMyRatings);
 
-        val layoutManager = (val) new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager((RecyclerView.LayoutManager) layoutManager);
 
         adapter = new MyRatingsRecyclerViewAdapter(this, model.getCurrentUser());
