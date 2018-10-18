@@ -25,11 +25,6 @@ public class Search implements Entity {
 
     private Date creationDate = new Date();
 
-    public Search(String userId, String term) {
-        this.userId = userId;
-        this.term = term;
-    }
-
     @Override
     public String getId() {
         return id;

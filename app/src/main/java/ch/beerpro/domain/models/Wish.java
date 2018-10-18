@@ -33,12 +33,6 @@ public class Wish implements Entity {
     @NonNull
     private Date addedAt;
 
-    public Wish(String userId, String beerId, Date addedAt) {
-        this.userId = userId;
-        this.beerId = beerId;
-        this.addedAt = addedAt;
-    }
-
     public static String generateId(String userId, String beerId) {
         return String.format("%s_%s", userId, beerId);
     }

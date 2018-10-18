@@ -6,6 +6,7 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -53,7 +54,7 @@ public class RatingsFragment extends Fragment
         model = ViewModelProviders.of(this).get(MainViewModel.class);
         model.getAllRatingsWithWishes().observe(this, this::updateRatings);
 
-        val layoutManager = (val) new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager((RecyclerView.LayoutManager) layoutManager);
 
         adapter = new RatingsRecyclerViewAdapter(this, this, model.getCurrentUser());

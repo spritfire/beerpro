@@ -1,15 +1,20 @@
 package ch.beerpro.presentation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import ch.beerpro.R;
 import ch.beerpro.presentation.explore.BeerCategoriesFragment;
 import ch.beerpro.presentation.explore.BeerManufacturersFragment;
@@ -32,6 +37,9 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity
         implements BeerCategoriesFragment.OnItemSelectedListener, BeerManufacturersFragment.OnItemSelectedListener {
 
+    private static final String PREFS_NAME = "prefs";
+    private static final String PREF_DARK_THEME = "dark_theme";
+
     /**
      * We use ButterKnife's view injection instead of having to call findViewById repeatedly.
      */
@@ -44,6 +52,13 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME, false);
+
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -113,6 +128,10 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.action_logout:
                 logout();
+                return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
