@@ -9,6 +9,8 @@ import android.util.Log;
 import ch.beerpro.R;
 import ch.beerpro.presentation.MainActivity;
 import ch.beerpro.domain.models.User;
+import ch.beerpro.presentation.ThemeActivity;
+
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,7 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Arrays;
 import java.util.List;
 
-public class SplashScreenActivity extends AppCompatActivity {
+public class SplashScreenActivity extends ThemeActivity {
 
     private static final String TAG = "SplashScreenActivity";
 

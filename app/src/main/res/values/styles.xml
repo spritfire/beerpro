@@ -10,8 +10,10 @@
         <item name="android:windowActivityTransitions">true</item>
 
         <!-- specify shared element transitions -->
-        <item name="android:windowSharedElementEnterTransition">@transition/change_view_transform</item>
-        <item name="android:windowSharedElementExitTransition">@transition/change_view_transform</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_view_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_view_transform
+        </item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -38,7 +40,7 @@
     </style>
 
     <style name="LoginScreenTheme" parent="AppTheme">
-        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
     </style>
 
     <style name="FirebaseUI.AuthMethodPicker.Logo">
@@ -71,8 +73,6 @@
     </style>
 
 
-
-
     <!-- Dark Theme -->
     <style name="AppTheme.Dark" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/darkColorPrimary</item>
@@ -85,8 +85,10 @@
         <item name="android:windowActivityTransitions">true</item>
 
         <!-- specify shared element transitions -->
-        <item name="android:windowSharedElementEnterTransition">@transition/change_view_transform</item>
-        <item name="android:windowSharedElementExitTransition">@transition/change_view_transform</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_view_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_view_transform
+        </item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -98,8 +100,8 @@
         <item name="titleMarginStart">@dimen/title_margin_start</item>
     </style>
 
-    <style name="LoginScreenTheme.Dark" parent="AppTheme.Dark">
-        <item name="android:windowBackground">@color/colorPrimary</item>
+    <style name="LoginScreenThemeDark" parent="AppTheme.Dark">
+        <item name="android:windowBackground">@color/darkColorPrimary</item>
     </style>
 
     <style name="RatingBar.Dark" parent="AppTheme.Dark">

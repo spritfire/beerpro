@@ -14,9 +14,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import ch.beerpro.R;
 import ch.beerpro.domain.models.Beer;
+import ch.beerpro.presentation.ThemeActivity;
 import ch.beerpro.presentation.details.DetailsActivity;
 
-public class MyBeersActivity extends AppCompatActivity implements OnMyBeerItemInteractionListener {
+public class MyBeersActivity extends ThemeActivity implements OnMyBeerItemInteractionListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

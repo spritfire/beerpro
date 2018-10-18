@@ -25,6 +25,7 @@ import ch.beerpro.R;
 import ch.beerpro.domain.models.Beer;
 import ch.beerpro.domain.models.Rating;
 import ch.beerpro.domain.models.Wish;
+import ch.beerpro.presentation.ThemeActivity;
 import ch.beerpro.presentation.details.createrating.CreateRatingActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -35,7 +36,7 @@ import java.util.List;
 
 import static ch.beerpro.presentation.utils.DrawableHelpers.setDrawableTint;
 
-public class DetailsActivity extends AppCompatActivity implements OnRatingLikedListener {
+public class DetailsActivity extends ThemeActivity implements OnRatingLikedListener {
 
     public static final String ITEM_ID = "item_id";
     private static final String TAG = "DetailsActivity";
