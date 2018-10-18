@@ -92,7 +92,7 @@ public class FridgeRepository {
 
     public LiveData<List<Pair<FridgeItem, Beer>>> getMyFridgeWithBeers(LiveData<String> currentUserId,
                                                                        LiveData<List<Beer>> allBeers) {
-        return map(combineLatest(getFridgeByUser(currentUserId.toString()), map(allBeers, Entity::entitiesById)), input -> {
+        return map(combineLatest(getFridgeByUser(currentUserId.getValue()), map(allBeers, Entity::entitiesById)), input -> {
             List<FridgeItem> fridgeItems = input.first;
             HashMap<String, Beer> beersById = input.second;
 
