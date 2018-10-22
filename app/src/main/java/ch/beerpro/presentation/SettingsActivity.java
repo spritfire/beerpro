@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Switch;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends ThemeActivity {
     private static final String PREFS_NAME = "prefs";
     private static final String PREF_DARK_THEME = "dark_theme";
 

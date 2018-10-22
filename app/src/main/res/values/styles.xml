@@ -4,7 +4,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorMenuBackground">@color/colorMenuBackground</item>
+        <item name="colorMenuText">@color/colorMenuText</item>
+        <item name="colorListEntry">@color/colorListEntry</item>
+        <item name="colorSearchTerm">@color/colorSearchTerm</item>
+        <item name="colorRating">@color/colorRating</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
+
         <item name="android:windowBackground">@color/windowBackgroundColor</item>
+
+        <item name="styleMyToolbar">@style/ToolBarStyle</item>
 
         <!-- enable window content transitions -->
         <item name="android:windowActivityTransitions">true</item>
@@ -40,7 +49,7 @@
     </style>
 
     <style name="LoginScreenTheme" parent="AppTheme">
-        <item name="android:windowBackground">?attr/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
     <style name="FirebaseUI.AuthMethodPicker.Logo">
@@ -51,7 +60,7 @@
     </style>
 
     <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlNormal">@color/colorMenuText</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
@@ -62,7 +71,7 @@
     <dimen name="title_margin_start">24dp</dimen>
 
     <style name="AppTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
         <item name="tabMaxWidth">256dp</item>
         <item name="tabIndicatorGravity">bottom</item>
         <item name="tabIndicatorHeight">4dp</item>
@@ -78,8 +87,16 @@
         <item name="colorPrimary">@color/darkColorPrimary</item>
         <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
         <item name="colorAccent">@color/darkColorAccent</item>
+        <item name="colorMenuBackground">@color/darkColorMenuBackground</item>
+        <item name="colorMenuText">@color/darkColorMenuText</item>
+        <item name="colorListEntry">@color/darkColorListEntry</item>
+        <item name="colorSearchTerm">@color/darkColorSearchTerm</item>
+        <item name="colorRating">@color/darkColorRating</item>
+        <item name="colorPrimaryLight">@color/darkColorPrimaryLight</item>
 
         <item name="android:windowBackground">@color/darkWindowBackgroundColor</item>
+
+        <item name="styleMyToolbar">@style/ToolBarStyleDark</item>
 
         <!-- enable window content transitions -->
         <item name="android:windowActivityTransitions">true</item>
@@ -93,7 +110,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="ToolBarStyle.Dark" parent="Theme.AppCompat">
+    <style name="ToolBarStyleDark" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:textColorPrimary">@color/darkColorAccent</item>
         <item name="android:textColorSecondary">@color/darkColorAccent</item>
         <item name="actionMenuTextColor">@color/darkColorAccent</item>
@@ -105,7 +122,7 @@
     </style>
 
     <style name="RatingBar.Dark" parent="AppTheme.Dark">
-        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlNormal">@color/colorMenuText</item>
         <item name="colorControlActivated">@color/darkColorPrimary</item>
     </style>
 

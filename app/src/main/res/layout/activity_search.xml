@@ -57,6 +57,7 @@
                         android:layout_toRightOf="@+id/searchImageView"
                         android:background="@android:color/transparent"
                         android:hint="Bier suchen"
+                        android:textColor="?attr/colorSearchTerm"
                         android:imeOptions="actionSearch"
                         android:inputType="text" />
 

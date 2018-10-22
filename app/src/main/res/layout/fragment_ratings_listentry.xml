@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_weight="1"
-            android:background="#ffeeeeee"
+            android:background="?attr/colorMenuBackground"
             app:layout_constraintBottom_toTopOf="@+id/actionsLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,15 +130,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_more_horiz_black_24dp"
-                android:drawableTint="@android:color/darker_gray"
+                android:drawableTint="?attr/colorMenuText"
                 android:text="Mehr Zum Bier"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="?attr/colorMenuText"
                 android:textSize="10sp" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="#ffeeeeee" />
+                android:background="?attr/colorMenuBackground" />
 
             <Button
                 android:id="@+id/wishlist"
@@ -147,15 +147,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_bookmark_brown_24dp"
-                android:drawableTint="@android:color/darker_gray"
+                android:drawableTint="?attr/colorMenuText"
                 android:text="Wunschliste"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="?attr/colorMenuText"
                 android:textSize="10sp" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="#ffeeeeee" />
+                android:background="?attr/colorMenuBackground" />
 
             <Button
                 android:id="@+id/like"
@@ -164,9 +164,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_thumb_up_black_24dp"
-                android:drawableTint="@android:color/darker_gray"
+                android:drawableTint="?attr/colorMenuText"
                 android:text="Gefällt mir"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="?attr/colorMenuText"
                 android:textSize="10sp" />
 
         </LinearLayout>

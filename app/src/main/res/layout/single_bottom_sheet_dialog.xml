@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:paddingBottom="8dp"
+    android:background="?attr/colorMenuBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,15 +19,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_place_black_24dp"
-            android:drawableTint="@android:color/darker_gray"
+            android:drawableTint="?attr/colorMenuText"
             android:text="Ort Hinzufügen"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="?attr/colorMenuText"
             android:textSize="10sp" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#ffeeeeee" />
+            android:background="?attr/colorAccent" />
 
         <Button
             android:id="@+id/addPrice"
@@ -35,9 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_attach_money_black_24dp"
-            android:drawableTint="@android:color/darker_gray"
+            android:drawableTint="?attr/colorMenuText"
             android:text="Meinen Preis Hinzufügen"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="?attr/colorMenuText"
             android:textSize="10sp" />
 
     </LinearLayout>
@@ -45,7 +46,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#ffeeeeee" />
+        android:background="?attr/colorAccent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,15 +60,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_refrigerator"
-            android:drawableTint="@android:color/darker_gray"
+            android:drawableTint="?attr/colorMenuText"
             android:text="In den Kühlschrank"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="?attr/colorMenuText"
             android:textSize="10sp" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#ffeeeeee" />
+            android:background="?attr/colorAccent" />
 
         <Button
             android:id="@+id/addPrivateNote"
@@ -76,9 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_create_black_24dp"
-            android:drawableTint="@android:color/darker_gray"
+            android:drawableTint="?attr/colorMenuText"
             android:text="Private Notiz hinzufügen"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="?attr/colorMenuText"
             android:textSize="10sp" />
 
 

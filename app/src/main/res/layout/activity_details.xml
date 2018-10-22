@@ -83,7 +83,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
-                            android:color="@android:color/darker_gray"
+                            android:color="?attr/colorMenuText"
                             android:text="3 Bewertungen"
                             android:textSize="12sp"
                             app:layout_constraintBaseline_toBaselineOf="@+id/avgRating"
@@ -109,7 +109,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="32dp"
-                            android:background="#ffeeeeee"
+                            android:background="?attr/colorMenuBackground"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
@@ -151,7 +151,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
-                            android:background="#ffeeeeee"
+                            android:background="?attr/colorMenuBackground"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/category" />
 
@@ -191,7 +191,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
-                            android:background="#ffeeeeee"
+                            android:background="?attr/colorMenuBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/addRatingExplanation" />
@@ -211,15 +211,15 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:drawableTop="@drawable/ic_more_horiz_black_24dp"
-                                android:drawableTint="@android:color/darker_gray"
+                                android:drawableTint="?attr/colorMenuText"
                                 android:text="Aktionen"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="?attr/colorMenuText"
                                 android:textSize="10sp" />
 
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="#ffeeeeee" />
+                                android:background="?attr/colorMenuBackground" />
 
                             <ToggleButton
                                 android:id="@+id/wishlist"
@@ -228,16 +228,16 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:drawableTop="@drawable/ic_bookmark_brown_24dp"
-                                android:drawableTint="@android:color/darker_gray"
+                                android:drawableTint="?attr/colorMenuText"
                                 android:textOff="Wunschliste"
                                 android:textOn="Wunschliste"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="?attr/colorMenuText"
                                 android:textSize="10sp" />
 
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="#ffeeeeee" />
+                                android:background="?attr/colorMenuBackground" />
 
                             <Button
                                 android:id="@+id/button2"
@@ -246,9 +246,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:drawableTop="@drawable/ic_share_black_24dp"
-                                android:drawableTint="@android:color/darker_gray"
+                                android:drawableTint="?attr/colorMenuText"
                                 android:text="Bier Teilen"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="?attr/colorMenuText"
                                 android:textSize="10sp" />
                         </LinearLayout>
 

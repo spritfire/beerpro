@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="?attr/colorRating"
     tools:context=".presentation.details.createrating.CreateRatingActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            android:theme="@style/ToolBarStyle"
+            android:theme="?attr/styleMyToolbar"
             app:layout_collapseMode="pin"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -105,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
-                android:background="#ffeeeeee"
+                android:background="?attr/colorMenuBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/addRatingExplanation2" />
@@ -151,7 +151,7 @@
                 android:id="@+id/separator5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#ffeeeeee"
+                android:background="?attr/colorMenuBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ratingText" />
@@ -171,15 +171,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/ic_more_horiz_black_24dp"
-                    android:drawableTint="@android:color/darker_gray"
+                    android:drawableTint="?attr/colorMenuText"
                     android:text="Ort Hinzufügen"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="?attr/colorMenuText"
                     android:textSize="10sp" />
                 <!--
                                 <View
                                     android:layout_width="1dp"
                                     android:layout_height="match_parent"
-                                    android:background="#ffeeeeee" />
+                                    android:background="?attr/colorMenuBackground" />
 
                                 <Button
                                     android:id="@+id/button3"
@@ -188,9 +188,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:drawableTop="@drawable/ic_bookmark_brown_24dp"
-                                    android:drawableTint="@android:color/darker_gray"
+                                    android:drawableTint="?attr/colorMenuText"
                                     android:text="Wunschliste"
-                                    android:textColor="@android:color/darker_gray"
+                                    android:textColor="?attr/colorMenuText"
                                     android:textSize="10sp" />
                 -->
             </LinearLayout>

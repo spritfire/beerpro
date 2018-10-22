@@ -17,6 +17,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
+            android:theme="?attr/styleMyToolbar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
              />
 
