@@ -65,7 +65,7 @@ public class FridgeRepository {
                 FridgeItem fridgeItem = fridgeEntryQuery.get().getResult().toObject(FridgeItem.class);
                 int newAmount = fridgeItem.getAmount() + 1;
                 fridgeEntryQuery.update(FridgeItem.FIELD_AMOUNT, newAmount);
-                return fridgeEntryQuery.delete();
+                return null;
             } else {
                 throw task.getException();
             }

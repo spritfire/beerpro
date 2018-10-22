@@ -6,4 +6,6 @@ import ch.beerpro.domain.models.Beer;
 
 public interface OnMyFridgeItemInteractionListener {
     void onMoreClickedListener(ImageView photo, Beer item);
+    void onAddOneClickedListener(Beer item);
+    void onRemoveOneClickedListener(Beer item);
 }

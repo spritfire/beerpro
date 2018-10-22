@@ -75,4 +75,14 @@ public class MyFridgeActivity extends AppCompatActivity implements OnMyFridgeIte
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, animationSource, "image");
         startActivity(intent, options.toBundle());
     }
+
+    @Override
+    public void onAddOneClickedListener(Beer item) {
+        model.increaseFridgeItemAmount(item.getId());
+    }
+
+    @Override
+    public void onRemoveOneClickedListener(Beer item) {
+        model.decreaseFridgeItemAmount(item.getId());
+    }
 }

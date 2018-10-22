@@ -66,6 +66,15 @@ public class MyFridgeRecyclerViewAdapter extends ListAdapter<Pair<FridgeItem, Be
         @BindView(R.id.photo)
         ImageView photo;
 
+        @BindView(R.id.amount)
+        TextView amount;
+
+        @BindView(R.id.addOne)
+        Button addOne;
+
+        @BindView(R.id.removeOne)
+        Button removeOne;
+
         ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, itemView);
@@ -75,10 +84,11 @@ public class MyFridgeRecyclerViewAdapter extends ListAdapter<Pair<FridgeItem, Be
             name.setText(item.getName());
             manufacturer.setText(item.getManufacturer());
             category.setText(item.getCategory());
-            name.setText(item.getName());
-            GlideApp.with(itemView).load(item.getPhoto()).apply(new RequestOptions().override(240, 240).centerInside())
-                    .into(photo);
+            GlideApp.with(itemView).load(item.getPhoto()).apply(new RequestOptions().override(240, 240).centerInside()).into(photo);
+            amount.setText(String.valueOf(fridgeItem.getAmount()));
             itemView.setOnClickListener(v -> listener.onMoreClickedListener(photo, item));
+            addOne.setOnClickListener(v -> listener.onAddOneClickedListener(item));
+            removeOne.setOnClickListener(v -> listener.onRemoveOneClickedListener(item));
         }
 
     }
