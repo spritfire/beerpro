@@ -76,15 +76,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentation.MainActivity" />
         </activity>
-<<<<<<< HEAD
         <activity android:name=".presentation.profile.myfridge.MyFridgeActivity"></activity>
-=======
         <activity android:name=".presentation.SettingsActivity" />
         <activity
             android:name=".presentation.ThemeActivity"
             android:label="@string/title_activity_theme"
             android:theme="@style/AppTheme"></activity>
->>>>>>> darkTheme
     </application>
 
 </manifest>

@@ -18,11 +18,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.Toolbar;
+import ch.beerpro.presentation.ThemeActivity;
 import ch.beerpro.presentation.details.DetailsActivity;
 
 import java.util.List;
 
-public class MyFridgeActivity extends AppCompatActivity implements OnMyFridgeItemInteractionListener {
+public class MyFridgeActivity extends ThemeActivity implements OnMyFridgeItemInteractionListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

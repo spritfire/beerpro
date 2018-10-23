@@ -32,15 +32,12 @@ public class Wish implements Entity {
     @NonNull
     private Date addedAt;
 
-<<<<<<< HEAD
     public Wish(String userId, String itemId, Date addedAt) {
         this.userId = userId;
         id = itemId;
         this.addedAt = addedAt;
     }
 
-=======
->>>>>>> darkTheme
     public static String generateId(String userId, String beerId) {
         return String.format("%s_%s", userId, beerId);
     }

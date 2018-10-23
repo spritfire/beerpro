@@ -22,7 +22,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="#ffeeeeee"
+                android:background="?attr/colorMenuBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
