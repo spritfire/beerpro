@@ -17,12 +17,13 @@ import butterknife.ButterKnife;
 import ch.beerpro.R;
 import ch.beerpro.domain.models.Beer;
 import ch.beerpro.domain.models.Wish;
+import ch.beerpro.presentation.ThemeActivity;
 import ch.beerpro.presentation.details.DetailsActivity;
 import lombok.val;
 
 import java.util.List;
 
-public class WishlistActivity extends AppCompatActivity implements OnWishlistItemInteractionListener {
+public class WishlistActivity extends ThemeActivity implements OnWishlistItemInteractionListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

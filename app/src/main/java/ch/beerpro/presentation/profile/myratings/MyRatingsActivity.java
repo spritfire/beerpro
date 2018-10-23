@@ -14,12 +14,13 @@ import butterknife.ButterKnife;
 import ch.beerpro.R;
 import ch.beerpro.domain.models.Rating;
 import ch.beerpro.domain.models.Wish;
+import ch.beerpro.presentation.ThemeActivity;
 import ch.beerpro.presentation.details.DetailsActivity;
 import lombok.val;
 
 import java.util.List;
 
-public class MyRatingsActivity extends AppCompatActivity implements OnMyRatingItemInteractionListener {
+public class MyRatingsActivity extends ThemeActivity implements OnMyRatingItemInteractionListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

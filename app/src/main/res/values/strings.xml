@@ -104,4 +104,5 @@
     <string name="title_activity_mybeers">Meine Biere</string>
     <string name="title_activity_myfridge">Mein Kühlschrank</string>
     <string name="action_search">Bier suchen</string>
+    <string name="title_activity_theme">ThemeActivity</string>
 </resources>

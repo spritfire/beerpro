@@ -22,7 +22,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="#ffeeeeee"
+                android:background="?attr/colorMenuBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -59,7 +59,7 @@
                 android:drawableTop="@drawable/ic_bookmark_brown_24dp"
                 android:drawableTint="@color/colorPrimary"
                 android:text="Entfernen"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="?attr/colorMenuText"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorMenuBackground" format="reference"/>
+    <attr name="colorMenuText" format="reference"/>
+    <attr name="colorSearchTerm" format="reference"/>
+    <attr name="colorListEntry" format="reference"/>
+    <attr name="styleMyToolbar" format="reference"/>
+    <attr name="colorRating" format="reference"/>
+    <attr name="colorPrimaryLight" format="reference"/>
+</resources>

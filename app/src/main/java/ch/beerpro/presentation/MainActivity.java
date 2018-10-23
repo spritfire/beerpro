@@ -1,15 +1,20 @@
 package ch.beerpro.presentation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import ch.beerpro.R;
 import ch.beerpro.presentation.explore.BeerCategoriesFragment;
 import ch.beerpro.presentation.explore.BeerManufacturersFragment;
@@ -29,7 +34,7 @@ import com.google.android.material.tabs.TabLayout;
  * <p>
  * The Activity has three tabs, each of which implemented by a fragment and held together by a {@link ViewPager}.
  */
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends ThemeActivity
         implements BeerCategoriesFragment.OnItemSelectedListener, BeerManufacturersFragment.OnItemSelectedListener {
 
     /**
@@ -113,6 +118,10 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.action_logout:
                 logout();
+                return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

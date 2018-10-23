@@ -25,6 +25,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.yalantis.ucrop.UCrop;
+
+import ch.beerpro.presentation.ThemeActivity;
 import pl.aprilapps.easyphotopicker.DefaultCallback;
 import pl.aprilapps.easyphotopicker.EasyImage;
 import pl.tajchert.nammu.Nammu;
@@ -34,7 +36,7 @@ import java.io.File;
 import java.util.List;
 import java.util.UUID;
 
-public class CreateRatingActivity extends AppCompatActivity {
+public class CreateRatingActivity extends ThemeActivity {
 
     public static final String ITEM = "item";
     public static final String RATING = "rating";
