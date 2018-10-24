@@ -64,4 +64,11 @@ public class DetailsViewModel extends ViewModel implements CurrentUser {
     public void addItemToFridge() {
         fridgeRepository.addItemToFridge(getCurrentUser().getUid(), beerId.getValue());
     }
+
+    public String getMessage() {
+        String greeting = "Hey, check out this beer!!\n";
+        String beer = getBeer().getValue().getName();
+        String manufacturer = getBeer().getValue().getManufacturer();
+        return greeting + "\n" + beer + "\nFrom: " + manufacturer;
+    }
 }

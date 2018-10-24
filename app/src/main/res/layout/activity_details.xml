@@ -240,7 +240,7 @@
                                 android:background="?attr/colorMenuBackground" />
 
                             <Button
-                                android:id="@+id/button2"
+                                android:id="@+id/btnShare"
                                 style="?android:attr/borderlessButtonStyle"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"

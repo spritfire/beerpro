@@ -3,12 +3,16 @@ package ch.beerpro.presentation.details;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -131,6 +135,33 @@ public class DetailsActivity extends ThemeActivity implements OnRatingLikedListe
         view.findViewById(R.id.addToFridge).setOnClickListener(v -> {
             model.addItemToFridge();
             Intent intent = new Intent(this, MyFridgeActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    @OnClick(R.id.btnShare)
+    public void showSharingBottomSheetDialog() {
+        View view = getLayoutInflater().inflate(R.layout.single_sharing_bottom_sheet_dialog, null);
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.setContentView(view);
+        dialog.show();
+
+        view.findViewById(R.id.shareEmail).setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("message/rfc822");
+            String message = model.getMessage();
+            intent.putExtra(Intent.EXTRA_TEXT, message);
+            try {
+                startActivity(Intent.createChooser(intent, "Send mail using ..."));
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(this, "No email client found!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        view.findViewById(R.id.shareSMS).setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("smsto:" + Uri.encode("1234567890")));
+            intent.putExtra("sms_body", model.getMessage());
             startActivity(intent);
         });
     }
