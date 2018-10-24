@@ -14,6 +14,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Pair;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -85,5 +86,16 @@ public class MyFridgeActivity extends ThemeActivity implements OnMyFridgeItemInt
     @Override
     public void onRemoveOneClickedListener(Beer item) {
         model.decreaseFridgeItemAmount(item.getId());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                supportFinishAfterTransition();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

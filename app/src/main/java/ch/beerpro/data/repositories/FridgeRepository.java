@@ -27,7 +27,7 @@ public class FridgeRepository {
 
     private static LiveData<List<FridgeItem>> getFridgeByUser(String userId) {
         return new FirestoreQueryLiveDataArray<>(FirebaseFirestore.getInstance().collection(FridgeItem.COLLECTION)
-                .orderBy(FridgeItem.FIELD_AMOUNT, Query.Direction.ASCENDING).whereEqualTo(FridgeItem.FIELD_USER_ID, userId),
+                .whereEqualTo(FridgeItem.FIELD_USER_ID, userId),
                 FridgeItem.class);
     }
 
@@ -62,10 +62,9 @@ public class FridgeRepository {
         DocumentReference fridgeEntryQuery = getFridgeItemEntry(userId, itemId);
         fridgeEntryQuery.get().continueWithTask(task -> {
             if (task.isSuccessful() && task.getResult().exists()) {
-                FridgeItem fridgeItem = fridgeEntryQuery.get().getResult().toObject(FridgeItem.class);
-                int newAmount = fridgeItem.getAmount() + 1;
-                fridgeEntryQuery.update(FridgeItem.FIELD_AMOUNT, newAmount);
-                return null;
+                FridgeItem fridgeItem = task.getResult().toObject(FridgeItem.class);
+                fridgeItem.setAmount(fridgeItem.getAmount() + 1);
+                return fridgeEntryQuery.set(fridgeItem);
             } else {
                 throw task.getException();
             }
@@ -76,10 +75,11 @@ public class FridgeRepository {
         DocumentReference fridgeEntryQuery = getFridgeItemEntry(userId, itemId);
         fridgeEntryQuery.get().continueWithTask(task -> {
             if (task.isSuccessful() && task.getResult().exists()) {
-                FridgeItem fridgeItem = fridgeEntryQuery.get().getResult().toObject(FridgeItem.class);
+                FridgeItem fridgeItem = task.getResult().toObject(FridgeItem.class);
                 int newAmount = fridgeItem.getAmount() - 1;
+                fridgeItem.setAmount(newAmount);
                 if (newAmount > 0) {
-                    fridgeEntryQuery.update(FridgeItem.FIELD_AMOUNT, newAmount);
+                    fridgeEntryQuery.set(fridgeItem);
                 } else {
                     fridgeEntryQuery.delete();
                 }
