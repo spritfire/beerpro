@@ -32,9 +32,9 @@ public class Wish implements Entity {
     @NonNull
     private Date addedAt;
 
-    public Wish(String userId, String itemId, Date addedAt) {
+    public Wish(String userId, String beerId, Date addedAt) {
         this.userId = userId;
-        id = itemId;
+        this.beerId = beerId;
         this.addedAt = addedAt;
     }
 
